@@ -23,7 +23,7 @@ SELECT DISTINCT ON (emp_no) emp_no,first_name,last_name,title   INTO unique_titl
 
 select count(title) ,title  into Retiring_Titles  from unique_titles  group by title order by count(title) desc;
 
-![retirement_titles](https://user-images.githubusercontent.com/90277142/139457024-47b10b66-ae82-47b4-940d-0552a7ca38a5.png)
+![Retiring_Titles](https://user-images.githubusercontent.com/90277142/139497969-4466a91f-e7af-478a-b3b0-4bf836d31c2b.png)
 
 * I created a Mentorship Eligibility table that holds the employees who are eligible to participate in a mentorship program. The current employees who were born between January 1, 1965 and December 31, 1965.I joined three tables with inner join statement,employees table joined with both dept_emp and titles tables.and i put condition on where clause to get only current employees who were born between january 1, 1965 and December 31, 1965.and remove the duplicate  emp_no use distinct on statement on emp_no.
 
@@ -36,16 +36,23 @@ where ((de.to_date = '9999-01-01') and (birth_date between '1965-1-1' and '1965-
 order by emp_no;
 
 ![mentorship_eligibilty](https://user-images.githubusercontent.com/90277142/139457927-9342b52a-9977-45dc-83a5-674c2f998c72.png)
-
+ 
 
 #### Summary:
-Provide high-level responses to the following questions, then provide two additional queries or tables that may provide more insight into the upcoming "silver tsunami."
-How many roles will need to be filled as the "silver tsunami" begins to make an impact?
-Are there enough qualified, retirement-ready employees in the departments to mentor the next generation of Pewlett Hackard employees?
-Summary:
-The summary addresses the two questions and contains two additional queries or tables that may provide more insight. (5 pt)
+* Total 90,398 roles for seven titles will need to be filled as the "silver tsunami begins to make an impact.In the deliverable 1,on the third point I created Retiring Titles table with the help of the COUNT() function that has the number of retirement-age employees by most recent job title.For this I also used group by function on title to know the count of employees for that particular title and at last order the count of title in descending order by Desc. keyword. After that, I calculated total number of employees who will be retired.Then I wrote a subquery and use sum function to get total number of employees who will be retired soon.
+
+* select sum(totalbytitle) as total_toberetire,count(title) as total_titlecount from (select count(title) As totalbytitle ,title from unique_titles group by title 
+order by count(title)) As overallcount;
+
+* Yes there are enough qualified,retirement-ready employees in the departments to mentor the next generation of Pewlett Hackard employees. I can say this because i created two tables,in one table i get the number of total employees for each deparments and in other table i get the number of total employee who will retire soon in respective departments. You can clearly see that retirement-ready employees are 1/3 or 1/4 of each departments.so when we will hire new employees,there are  enough qualified,,retirement-ready employees in the departments to mentor the next generation of Pewlett Hackard employees.
+
+My tables are:-
 
 
 
+
+![totalretire_empbydept](https://user-images.githubusercontent.com/90277142/139505483-1fabe694-52f5-4bf6-bc6f-1f110e8be3bf.png)
+
+![totalunretire_empbydept](https://user-images.githubusercontent.com/90277142/139505495-46933b28-50f4-425a-9463-90586feae4fc.png)
 
 
