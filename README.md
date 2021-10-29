@@ -2,8 +2,8 @@
 ## Overview of Pewlett-Hackard-Analysis
 * The purpose of Pewlett-Hackard-Analysis is to know the Number of Retiring Employees by Title and create retirement_titles and unique_titles tables that hold the data of unique title employees who is going to retire . If i will get more than one title for any employee number because of promotion,select current title by using **distinct on** statement with order by to remove dupticate emp_no and  to create a table that contains the most recent title of each employee. At last, i created query to get the count of unique titles from unique_titles table which store unique titles and store the data in new Retiring_Titles table.And in second deliverable i will create a mentorship-eligibility table that holds the current employees who were born between January 1, 1965 and December 31, 1965.
 
-* **The purpose of the new analysis**(silver tsunami) is well defined. (3 pt)you’ll write a report to help the manager prepare for the upcoming "silver tsunami."
-
+* **silver tsunami Analysis**
+  The purpose of silver tsunami Analysis is 
 ### Results: 
 * I created Retirement Titles table that holds all the titles of current employees who were born between January 1, 1952 and December 31, 1955.For this I used left join on titles table with employees table and join tables with the help of primary key or foreign key emp_no and get result in emp_no order.I used e as alias of employees table and t as alias of titles table for clean query.
 
@@ -46,12 +46,11 @@ order by count(title)) As overallcount;
 
 * Yes there are enough qualified,retirement-ready employees in the departments to mentor the next generation of Pewlett Hackard employees. I can say this because i created two tables,in one table i get the number of total employees for each deparments and in other table i get the number of total employee who will retire soon in respective departments. You can clearly see that retirement-ready employees are 1/3 or 1/4 of each departments.so when we will hire new employees,there are  enough qualified,,retirement-ready employees in the departments to mentor the next generation of Pewlett Hackard employees.
 
-My tables are:-
-
-
-
+**Table that contain data of Total employees for each department who will be retired :-**
 
 ![totalretire_empbydept](https://user-images.githubusercontent.com/90277142/139505483-1fabe694-52f5-4bf6-bc6f-1f110e8be3bf.png)
+
+**Table that contain data of Total employees for each department :-**
 
 ![totalunretire_empbydept](https://user-images.githubusercontent.com/90277142/139505495-46933b28-50f4-425a-9463-90586feae4fc.png)
 
