@@ -52,10 +52,12 @@ order by count(title)) As overallcount;
 
 **Table that contain data of Total employees for each department who will be retired :-**
 
-![totalretire_empbydept](https://user-images.githubusercontent.com/90277142/139505483-1fabe694-52f5-4bf6-bc6f-1f110e8be3bf.png)
+![totaltoberetire](https://user-images.githubusercontent.com/90277142/139596342-397982bd-4aa8-4a34-a05c-c8c35b480920.png)
+
 
 **Table that contain data of Total employees for each department :-**
 
-![totalunretire_empbydept](https://user-images.githubusercontent.com/90277142/139505495-46933b28-50f4-425a-9463-90586feae4fc.png)
+![totalempbydept](https://user-images.githubusercontent.com/90277142/139596339-d8e74986-19b5-4e4a-b8c6-3f7ed4a7f791.png)
+
 
 
